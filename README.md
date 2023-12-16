@@ -1,35 +1,65 @@
-# flipper4dummies
-Flipper Zero repository of info, links, apps and how to's for people new to Git powered data and project management.  Full disclosure, this includes me.
-****
-# LEGAL DISCLAIMER
-All files, tutorials, projects and any information contained here are for research purposes.  It is illegal to hack, gain sereptitous entry into foreign networks and devices and basically, if you have to ask if you should- then you shouldn't, unlesss you have the newtork or device owner's permission.  Don't do anhyting illegal with this information.  It is provided as a means to test your own systems, netwqorks, hardware and software.
-This is white hat ethical hacking, folks.  Don't do anything stupid, cuz jail sucks and the US Gov't will shove their almighty foot up your ass if you get caught uing this or any imformartiom for illegal purposes. 
-****
+# Community Portals
 
-# Welcome
+Do you have a great portal that you would like to share? Please submit a pull request placing your portal in this folder. It'd be great to see what the community can come up with! Please also add yourself to this readme so your contribution is recognized.
 
-Current Set Up:
+## Limitations
 
-I'm currently using Flipper Xtreme Firmware v0052 with an ESP32 Flipper Wifi Dev Board V1.0 flashed with marauder and evil portal firmwares.  I have a few GPIO boards comin in.
+The ESP32 access point will not have internet access while hosting the portal, as a result there cannot be any requests for stylesheets or javascript such as CDNs for bootstrap and JQuery.
 
-[Flipper-FXW Git](https://github.com/Flipper-XFW)
+All HTML/CSS/JS must be in a single HTML file. This is due to the fact that the index.html kept in the memory of the esp32.
 
-[WiFi Devboard for Flipper Zero ESP32 S2](https://shop.flipperzero.one/products/wifi-devboard)
+There is a 20k character limit for each HTML file.
 
-[PandaXu Wifi Multiboard NRF24+ESP32 GPIO Module](https://www.amazon.com/Modification-Multiboard-Development-Attachment-Accessory/dp/B0CKSSWH8C)
+The form data must be sent to the `/get` endpoint as a GET request with the params `email` & `password`. You can put any information you want in these two fields. For example the `email` param can contain a username instead, just keep the param name as `email`.
 
-[K0R41 External SubGhz GPIO Module](https://www.amazon.com/K0R41-External-CC1101-Antenna-Flipper/dp/B0BY1WVHG2)
-
-[Soft Protective Case Cover Silicone Case for Flipper Zero - Orange](https://www.amazon.com/Soft-Protective-Cover-Silicone-Flipper/dp/B0C5D49TH6/ref=pd_lpo_sccl_2/138-9276743-3406220?pd_rd_w=neu0K&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=BQCT4SQKHWRB8YPN420P&pd_rd_wg=OO4AE&pd_rd_r=cd198275-1fe6-4935-9387-9d4a88334dec&pd_rd_i=B0C5D49TH6&th=1)
-
-Other things I keep in my [Pelican 1120 Case](https://www.pelican.com/us/en/product/cases/protector/1120):
-- 2 lengths of 18 ga wire to test circuits and GPIO board
-- SD CARD Holder with 4 Micro SD cards for various firmwares and 2 SD Cards, one for saving flipper data and the other is a Micro SD card reader.
-- [iOS Lightning Micro SD Reader by Gigastone](https://www.amazon.com/Certified-Gigastone-Lightning-Versatile-Compatible/dp/B01CO57QRI?th=1)
-- SD/ Micro SD Card Reader
-- USB-C Converter
-- Half a dozen blank NFC tags
-****
+Please check the example `index.html` to get an idea of what this has to look like. 
 
 
+## Contributors
+
+Thank you so much to the following contributors for providing awesome portals. 
+
+- `Google_Modern.html` by [roshanravan](https://github.com/roshanravan)
+- `Twitter.html` by [roshanravan](https://github.com/roshanravan)
+- `Facebook.html` by [roshanravan](https://github.com/roshanravan)
+- `CoxWifi.html` by [qqmajikpp](https://github.com/qqmajikpp)
+- `Starlink.html` by [roshanravan](https://github.com/roshanravan)
+- `Spectrum.html` by [roshanravan](https://github.com/roshanravan)
+- `T_Mobile.html` by [roshanravan](https://github.com/roshanravan)
+- `Verizon.html` by [roshanravan](https://github.com/roshanravan)
+- `at&t.html` by [roshanravan](https://github.com/roshanravan)
+- `southwest_airline.html` by [roshanravan](https://github.com/roshanravan)
+- `delta_airline.html` by [roshanravan](https://github.com/roshanravan)
+- `united_airline.html` by [roshanravan](https://github.com/roshanravan)
+- `american_airline.html` by [roshanravan](https://github.com/roshanravan)
+- `Jet_Blue.html` by [roshanravan](https://github.com/roshanravan)
+- `Better_Google_Mobile.html` by [breaching](https://github.com/breaching)
+- `AlaskaAirline.html` by [roshanravan](https://github.com/roshanravan)
+- `Amazon.html` by [roshanravan](https://github.com/roshanravan)
+- `FakeHack.html` by [roshanravan](https://github.com/roshanravan)
+- `FakeHack2.html` by [roshanravan](https://github.com/roshanravan)
+- `Matrix.html` by [roshanravan](https://github.com/roshanravan)
+- `Microsoft.html` by [roshanravan](https://github.com/roshanravan)
+- `Prank_Game.html` by [roshanravan](https://github.com/roshanravan)
+- `SpiritAirlines.html` by [roshanravan](https://github.com/roshanravan)
+- `Twitch.html` by [roshanravan](https://github.com/roshanravan)
+- `apple.html` by [Jules](https://github.com/jules0835)
+- `Frequency.html` by [roshanravan](https://github.com/roshanravan)
+
+## Disclaimer
+
+Dear User,
+
+Our captive WiFi login portals designed specifically for educational purposes. These portals have been carefully developed to offer a hands-on experience in the field of cybersecurity and penetration testing. As a responsible provider, I would like to emphasize that any illegal use of these portals is strictly prohibited.
+
+It is crucial to acknowledge that using these portals for any unauthorized activities, such as hacking into networks or attempting to access sensitive information without proper authorization, is deemed illegal and unethical. I strongly discourage engaging in any activities that may cause harm, compromise network security, or infringe upon others' privacy rights.
+
+By accessing and utilizing the captive WiFi login portals, users take complete responsibility for their actions and the consequences that may arise from them. I expect users to act responsibly, adhere to ethical guidelines, and ensure that their activities remain within the boundaries of the law and ethical norms.
+
+Remember, these portals are aimed at promoting knowledge, improving cybersecurity skills, and raising awareness about the potential vulnerabilities present in network infrastructures. I encourage you to explore the portals, learn from them, and embrace the opportunity to enhance your understanding in a controlled and legal environment.
+
+Thank you for your cooperation and commitment to responsible usage. Together, let us foster a secure and ethical cyberspace.
+
+Best regards,
+[roshanravan](https://github.com/roshanravan)
 
